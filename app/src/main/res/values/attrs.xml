@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomSpinner">
+
+        <attr name="spinner_drawable" format="reference"/>
+        <attr name="spinner_drawableSize" format="integer"/>
+        <attr name="spinner_downArrowIconTint" format="reference"/>
+        <attr name="spinner_items" format="reference"/>
+        <attr name="spinner_selectedItem" format="reference"/>
+        <attr name="spinner_is_enabled" format="boolean"/>
+
+        <attr name="spinner_type" format="enum">
+            <enum name="IMAGE" value="0"/>
+            <enum name="TEXT" value="1"/>
+            <enum name="IMAGE_TEXT" value="2"/>
+        </attr>
+
+        <attr name="spinner_dropDownType" format="enum">
+            <enum name="IMAGE" value="0"/>
+            <enum name="TEXT" value="1"/>
+            <enum name="IMAGE_TEXT" value="2"/>
+        </attr>
+
+    </declare-styleable>
+
+</resources>

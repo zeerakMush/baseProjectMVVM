@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">BaseProject-MVVM</string>
+
+    <!--<editor-fold desc="appbar titles">-->
+    <string name="login_screen_title" tools:ignore="ExtraTranslation">Login</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="login fragment">-->
+    <string name="login_title">Contacts App</string>
+    <string name="login_title_desc">Login to continue using our app</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forgot password?</string>
+    <string name="dont_have_account">Don\'t have an account yet?</string>
+    <string name="signup">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+
+    <string name="add">Add</string>
+
+    // dialogs
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="logout_confirmation">Are you sure your want to log out? it will close your session.</string>
+
+    // dialog deactivate account
+
+    // dialog delete contact
+
+    // dialog assign role
+
+    // dialog permission
+
+    // top and bottom session dialog
+    <string name="error_empty_email">Please enter email address</string>
+    <string name="error_empty_phone">Please enter phone number</string>
+    <string name="error_invalid_phone">invalid phone number</string>
+    <string name="error_invalid_email">Invalid email address</string>
+    <string name="error_empty_password">Please enter password</string>
+    <string name="error_short_password">Password is too short</string>
+    <string name="error_password_not_match">Password does not match</string>
+    <string name="verify_user_fragment_title">Verify User</string>
+    <!--    <string name="manage_sessions"><u>Manage Sessions ➜</u></string>-->
+
+    // bottom sheet image picker
+    <!--</editor-fold>-->
+
+</resources>

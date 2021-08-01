@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="_0sdp">0dp</dimen>
+
+    <fraction name="screenStartPadding">0.08</fraction> // in percentage
+    <fraction name="screenEndPadding">0.92</fraction>
+    // in percentage
+
+    <dimen name="fontExtraSmall">@dimen/_8ssp</dimen>
+    <dimen name="fontNormal">@dimen/_10ssp</dimen>
+    <dimen name="fontExtraLarge">@dimen/_12ssp</dimen>
+    <dimen name="fontMaxLarge">@dimen/_13ssp</dimen>
+
+    <dimen name="bigTitleFont">@dimen/_22ssp</dimen>
+    <dimen name="smallTitleFont">@dimen/_14ssp</dimen>
+
+</resources>

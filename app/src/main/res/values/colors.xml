@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+	<color name="colorPrimary">#0165a8</color>
+
+    <color name="colorPrimaryPurple">#040686</color>
+
+    <color name="gradientBlueLow">#0077B6</color>
+
+	<color name="fontBlue">#015BA0</color>
+	<color name="fontNormal">@color/gray</color>
+
+    <color name="gray">#888888</color>
+	<color name="lightGray">#BBBBBB</color>
+	<color name="lightLightGray">#DDDDDD</color>
+	<color name="lightestGray">#EEEEEE</color>
+
+	<color name="lightRed">#EF2F2F</color>
+
+</resources>

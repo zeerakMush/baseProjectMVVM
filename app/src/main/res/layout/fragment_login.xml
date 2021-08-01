@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.zk.base_project.views.ui.registration.login.LoginViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_login_background"
+        android:fillViewport="true"
+        tools:context=".views.ui.registration.login.LoginFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/login_image"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:src="@drawable/img_login_book"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextViewTitle"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:text="@string/login_title"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/login_image" />
+
+            <TextView
+                android:id="@+id/textview1"
+                style="@style/TextViewLightRegular"
+                android:text="@string/login_title_desc"
+                android:textSize="@dimen/fontMaxLarge"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <TextView
+                android:id="@+id/email_textview"
+                style="@style/TextViewDefault"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/email"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/textview1" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                style="@style/EditTextDefault"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/email_textview">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/EditTextDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_email"
+                    android:hint="@string/email"
+                    android:padding="0dp"
+                    android:text="@={viewModel.email.value}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/password_textview"
+                style="@style/TextViewDefault"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/password"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/email" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                style="@style/EditTextDefault"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/password_textview"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/EditTextDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:hint="@string/password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:padding="0dp"
+                    android:text="@={viewModel.password.value}"
+                    app:onOkInSoftKeyboard="@{()->viewModel.onLoginClicked()}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/forget_password"
+                style="@style/TextViewBlueRegular"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/forget_password"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
+
+
+            <TextView
+                android:id="@+id/textview_login_error"
+                style="@style/TextViewDefault"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_min"
+                android:gravity="center"
+                android:text="@{viewModel.error}"
+                android:textColor="@color/lightRed"
+                app:isVisible="@{viewModel.error != null}"
+                app:layout_constraintBottom_toTopOf="@+id/login_btn"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/forget_password"
+                tools:text="" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_btn"
+                style="@style/ButtonDefault"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:onClick="@{()->viewModel.onLoginClicked()}"
+                android:text="@string/login"
+                app:isVisible="@{!viewModel.isLoading()}"
+                app:layout_constraintBottom_toTopOf="@id/dont_have_account_txt"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/forget_password" />
+
+            <ProgressBar
+                android:id="@+id/pb_loading"
+                android:layout_width="@dimen/_0sdp"
+                android:layout_height="@dimen/_35sdp"
+                app:isVisible="@{viewModel.isLoading()}"
+                app:layout_constraintBottom_toTopOf="@id/dont_have_account_txt"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/forget_password" />
+
+            <TextView
+                android:id="@+id/dont_have_account_txt"
+                style="@style/TextViewDefault"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:text="@string/dont_have_account"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/signup"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+
+            <TextView
+                android:id="@+id/signup"
+                style="@style/TextViewBlueBold"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/signup"
+                app:layout_constraintBottom_toBottomOf="@id/dont_have_account_txt"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toEndOf="@+id/dont_have_account_txt"
+                app:layout_constraintTop_toTopOf="@id/dont_have_account_txt" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@fraction/screenStartPadding" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@fraction/screenEndPadding" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

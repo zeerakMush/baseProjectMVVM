@@ -1,0 +1,141 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.SmartConnect" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+
+        <!-- Customize your theme here. -->
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="AppBarDefault" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="colorOnSurface">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="itemIconSize">@dimen/_20sdp</item>
+    </style>
+
+    <style name="ButtonDefault" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:layout_width">@dimen/_0sdp</item>
+        <item name="android:layout_height">@dimen/_35sdp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="cornerRadius">@dimen/_30sdp</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/fontNormal</item>
+        <item name="android:insetTop">@dimen/_0sdp</item>
+        <item name="android:insetBottom">@dimen/_0sdp</item>
+        <item name="android:insetLeft">@dimen/_0sdp</item>
+        <item name="android:insetRight">@dimen/_0sdp</item>
+    </style>
+
+    <!--region textview styles-->
+    <style name="TextViewDarkBold" parent="TextViewDefault">
+        <item name="android:textSize">@dimen/fontMaxLarge</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextViewDarkSemiBold" parent="TextViewDefault">
+        <item name="android:textSize">@dimen/fontExtraLarge</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextViewDarkRegular" parent="TextViewDefault">
+        <item name="android:textSize">@dimen/fontNormal</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextViewLightRegular" parent="TextViewDarkRegular">
+        <item name="android:textColor">@color/fontNormal</item>
+    </style>
+
+    <style name="TextViewBlueBold" parent="TextViewDefault">
+        <item name="android:textSize">@dimen/fontExtraLarge</item>
+        <item name="android:textColor">@color/fontBlue</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextViewBlueRegular" parent="TextViewBlueBold">
+        <item name="android:textSize">@dimen/fontNormal</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="TextViewDefault">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/fontNormal</item>
+        <item name="android:textColor">@color/fontNormal</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="TextViewTitle" parent="TextViewDefault">
+        <item name="android:textSize">@dimen/bigTitleFont</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <!--	<style name="TextViewExtraBigLight" parent="TextViewDefault">-->
+    <!--		<item name="android:textSize">@dimen/fontMaxLarge</item>-->
+    <!--		<item name="android:textColor">@color/fontNormal</item>-->
+    <!--		<item name="android:fontFamily">@font/poppins_regular</item>-->
+    <!--	</style>-->
+
+    <!--	<style name="TextViewExtraBigDark" parent="TextViewDefault">-->
+    <!--		<item name="android:textSize">@dimen/fontMaxLarge</item>-->
+    <!--		<item name="android:textColor">@android:color/black</item>-->
+    <!--		<item name="android:fontFamily">@font/poppins_semibold</item>-->
+    <!--	</style>-->
+
+    <!--	<style name="TextViewBigDark" parent="TextViewDefault">-->
+    <!--		<item name="android:textSize">@dimen/fontLarge</item>-->
+    <!--		<item name="android:textColor">@android:color/black</item>-->
+    <!--		<item name="android:fontFamily">@font/poppins_medium</item>-->
+    <!--	</style>-->
+    <!--endregion-->
+
+    <!--region edittext styles-->
+    <style name="EditTextDefault" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="android:textSize">@dimen/fontNormal</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_30sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_30sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_30sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_30sdp</item>
+        <item name="boxBackgroundColor">@android:color/white</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:drawablePadding">@dimen/_10sdp</item>
+    </style>
+
+
+    <!--endregion-->
+
+    <style name="AppBottomSheetDialogTheme" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppBottomSheetStyle</item>
+    </style>
+
+    <style name="AppBottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/BottomSheetRoundedOverlay</item>
+    </style>
+
+    <style name="BottomSheetRoundedOverlay" >
+        <item name="cornerSizeTopLeft">@dimen/_10sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_10sdp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+</resources>
